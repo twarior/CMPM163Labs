@@ -11,7 +11,60 @@
 	<body>
 		<script src="../three.js-master/build/three.js"></script>
 		<script>
-			// Our Javascript will go here.
+            // Our Javascript will go here.
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(75, 
+            window.innerWidth/window.innerHeight, 0.1, 1000);
+
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            //cube 1 pink
+            var geometry = new THREE.BoxGeometry();
+            var material = new THREE.MeshBasicMaterial( {color: 0xAA00AA} );
+     	    var cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
+            
+            //cube 2 blue
+            var geometry2 = new THREE.BoxGeometry();
+            var material2 = new THREE.MeshBasicMaterial( {color: 0x0000AA} );
+            var cube2 = new THREE.Mesh(geometry2, material2);
+            scene.add(cube2);
+            geometry2.translate(1, 1, 0);
+            
+            //cube 3 red
+            var geometry3 = new THREE.BoxGeometry();
+            var material3 = new THREE.MeshBasicMaterial( {color: 0xAA0000} );
+            var cube3 = new THREE.Mesh(geometry3, material3);
+            scene.add(cube3);
+            geometry3.translate(-1, 1, 0)
+
+            //cube 4 green
+            var geometry4 = new THREE.BoxGeometry();
+            var material4 = new THREE.MeshBasicMaterial( {color: 0x00AA00} );
+            var cube4 = new THREE.Mesh(geometry4, material4);
+            scene.add(cube4);
+            geometry4.translate(0, 2, 0);
+            camera.position.z = 5; //this moves the camera towards the viewer
+
+            function animate() {
+                requestAnimationFrame(animate);
+                renderer.render(scene, camera);
+                geometry.rotateX(0.01);
+                geometry.rotateY(0.01);
+                geometry2.rotateX(-0.01);
+                geometry2.rotateY(0.01);
+                geometry3.rotateX(0.01);
+                geometry3.rotateY(-0.01);
+                geometry4.rotateX(-0.01);
+                geometry4.rotateY(-0.01);
+                
+            }
+            animate();
+
+            
+
 		</script>
 	</body>
 </html>
