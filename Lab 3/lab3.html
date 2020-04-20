@@ -133,12 +133,8 @@
 				if(count == 4) {
 					//chosing colors for cube
 					let uniforms2 = {
-						colorC: {type: 'vec3', value: new
-							THREE.Color(0xFF0000)},
-						colorB: {type: 'vec3', value: new 
-							THREE.Color(0xF0F0F0)},
-						colorA: {type: 'vec3', value: new 
-							THREE.Color(0x0F0F0F)}
+						time: { type: "f", value: .69 },
+        				resolution: { type: "v2", value: new THREE.Vector2() }
 	 				};
 
 					geometry3 = new THREE.BoxGeometry(1, 1, 1);
