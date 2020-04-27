@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 4: Textures & Normal Maps</title>
+		<style>
+			body { margin: 0; }
+			canvas { display: block; }
+		</style>
+	</head>
+	<body>
+		<script src="../three.js-master/build/three.js"></script>
+		<script>
+			// setup the scene
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+      		var renderer = new THREE.WebGLRenderer();
+      		renderer.setSize(window.innerWidth, window.innerHeight);
+      		document.body.appendChild(renderer.domElement);
+			camera.position.z = 5;
+			
+			// setup the cube
+            var geometry = new THREE.BoxGeometry();         
+            var texture = THREE.ImageUtils.loadTexture("WavySand.JPG"); //add texture
+            var normMap = THREE.ImageUtils.loadTexture("WavySand_norm.JPG"); //normal map texture
+            var material = new THREE.MeshPhongMaterial({map: texture, normalMap: normMap});
+            var cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
+
+            //secondary cube
+            var material = new THREE.MeshPhongMaterial( { map:texture } );
+            var cube2 = new THREE.Mesh(geometry, material);
+            scene.add(cube2);
+            cube2.position.x -= 2;
+
+            //tirtiary cube
+            var iceTexture = THREE.ImageUtils.loadTexture("ScratchedIce.JPG"); //add texture
+            var iceNormMap = THREE.ImageUtils.loadTexture("ScratchedIce_norm.JPG"); //normal map texture
+            var iceMaterial = new THREE.MeshPhongMaterial({map: iceTexture, normalMap: iceNormMap});
+            var cube3 = new THREE.Mesh(geometry, iceMaterial);
+            scene.add(cube3);
+            cube3.position.x += 2;
+
+
+			// add the light
+			var light = new THREE.PointLight(0xffffff, 1, 1000);
+			light.position.set(10, 10, 10);
+            scene.add(light);
+            
+            function moveLight(delta){
+                if(light.position.x <= 30 && delta >= 0){
+                    light.position.x += .1;
+                    light.position.y += .1;
+                    
+                    return;
+                }
+                if(light.position.x >= -30 && delta <= 0){
+                    light.position.x -= .1;
+                    light.position.y -= .1;
+                    return;
+                }
+            }
+            var delta = 1;
+			function animate() {
+                if(light.position.x > 30){
+                    delta = -1;
+                }
+                if(light.position.x <= -30){
+                    delta = 1;
+                }
+                moveLight(delta);
+				requestAnimationFrame(animate);
+				renderer.render(scene, camera);
+			}
+			animate();
+
+
+		</script>
+	</body>
+</html>
