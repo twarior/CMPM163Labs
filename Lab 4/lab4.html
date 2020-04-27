@@ -19,7 +19,12 @@
       		document.body.appendChild(renderer.domElement);
 			camera.position.z = 5;
             
-            var geometry1, material1, mesh1;
+            var geometry1, material1, mesh1, geometry2, material2, mesh2;
+
+            THREE.Cache.enabled = true;
+            var count = 0;
+            var loader = new THREE.FileLoader();
+            var fshader, vshader, fshader02, vshader02;
 
             function addTextureShaderCube() {
                 if(count == 2) {
@@ -33,16 +38,30 @@
               		    vertexShader: vshader,
                           precision: "mediump"
                     });
-      		    mesh1 = new THREE.Mesh(geometry1, material1);
-      		    mesh1.position.x = 2;
-      		    scene.add(mesh1);
+      		        mesh1 = new THREE.Mesh(geometry1, material1);
+      		        mesh1.position.x = 2;
+      		        scene.add(mesh1);
     	        }
             }
 
-            THREE.Cache.enabled = true;
-            var count = 0;
-            var loader = new THREE.FileLoader();
-            var fshader, vshader;
+            function addTextureShaderCube02() {
+                if(count == 4) {
+                    var uniforms2 = {texture2: { type: "t", value: 
+                        THREE.ImageUtils.loadTexture("BrickSquares.JPG")}
+                    };
+      		        geometry2 = new THREE.BoxGeometry(1, 1, 1);
+      		        material2 =  new THREE.ShaderMaterial({
+            		    uniforms: uniforms2,
+      			        fragmentShader: fshader02,
+              		    vertexShader: vshader02,
+                          precision: "mediump"
+                    });
+      		        mesh2 = new THREE.Mesh(geometry2, material2);
+                    mesh2.position.x = 2;
+                    mesh2.position.y = 2;
+      		        scene.add(mesh2);
+    	        }
+            }
 
       	    loader.load('shaders/vertexShader.vert',
       		// onLoad callback
@@ -76,7 +95,47 @@
             // onError callback
       		function (err) {
       			console.error('An error happened');
+            });
+            
+
+
+            //second cube with tiled map
+            
+            loader.load('shaders/vertexShader02.vert',
+      		// onLoad callback
+      		function (data) {
+      			console.log(data); // output the text to the console
+      			vshader02 = data;
+      			count += 1;
+      			addTextureShaderCube02(); // we will write this method
+      		},
+      		// onProgress callback
+      		function (xhr) {
+      			console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+      		},
+     		// onError callback
+      		function (err) {
+      			console.error('An error happened');
       		});
+
+            loader.load('shaders/fragmentShader02.frag',
+      		// onLoad callback
+      		function (data) {
+      			console.log(data); // output the text to the console
+      			fshader02 = data;
+      			count += 1;
+      			addTextureShaderCube02(); // we will write this method
+      		},
+      		// onProgress callback
+      		function (xhr) {
+      			console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+      		},
+            // onError callback
+      		function (err) {
+      			console.error('An error happened');
+      		});
+
+
 
 
 
