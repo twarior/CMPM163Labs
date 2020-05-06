@@ -36,6 +36,8 @@ multiplying that by 2.0;
 //Lab 4 Video
 https://drive.google.com/file/d/1C9i-PbvrksryoOz3Hyd9rXY1xYifBf1R/view?usp=sharing
 
+//I did part 1 for Lab 5
+
 //Lab 5 Video
 https://drive.google.com/file/d/1CdyJHf5rzuhiVAnbgQjO0g8JpkzWkmeM/view?usp=sharing
 
