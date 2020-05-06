@@ -9,7 +9,7 @@ https://drive.google.com/file/d/1TaiHmrjy326l5j7phbM1IykEN_uD7bBQ/view?usp=shari
 //Lab 3 Cubes Video
 https://drive.google.com/file/d/1rJpXl3KB4JAraUWA9NN8ZP23WenOCsyC/view?usp=sharing
 
-//Lab 3 Explination
+//Lab 3 Explination:
 For the top cube, I mainly looked at the code here:
 https://gist.github.com/kylemcdonald/9593057 ,
 but changed it a bit to make it more look like a grid as well as fit into the separate
@@ -24,7 +24,7 @@ For the bottom right cube, I interpolated between green and purple.
 24.b: uv = ((u)/(-8)) + 1
 24.c: Grey
 
-//Lab 4 cube discriptions 
+//Lab 4 cube discriptions:
 The bottom left cube is just using the image as a texture with no normal.
 Next to that, the bottom middle cube is the same image, but now with a normal texture 
 as well so it has shadows. 
@@ -36,5 +36,11 @@ multiplying that by 2.0;
 //Lab 4 Video
 https://drive.google.com/file/d/1C9i-PbvrksryoOz3Hyd9rXY1xYifBf1R/view?usp=sharing
 
+//Lab 5 Video
+https://drive.google.com/file/d/1CdyJHf5rzuhiVAnbgQjO0g8JpkzWkmeM/view?usp=sharing
 
+//Lab 5 Explination:
+I changed the material for the kart body by making it more mattalic, less smooth, adding
+emmision and giving it the color of another asset in the game. I also made the track more 
+transparent and added a flame trail and rainbow trail to the player's head. 
 
