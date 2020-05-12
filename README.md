@@ -46,3 +46,9 @@ I changed the material for the kart body by making it more mattalic, less smooth
 emmision and giving it the color of another asset in the game. I also made the track more 
 transparent and added a flame trail and rainbow trail to the player's head. 
 
+//Lab 6 Lights: 
+Directional Light: Behaves like the sun, lights all objects in the scene based on the direction of the light source. Position is irrelevant. 
+Point LIght: Works light a lightbulb, illuminates object in the scene based on the lights position and 
+direction does not affect the illumination as it creates light equally in all directions. 
+Area Light: Only work when baking a light map. Shine in all directions to one side of a rectangular plane. 
+
