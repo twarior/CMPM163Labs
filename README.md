@@ -52,3 +52,15 @@ Point LIght: Works light a lightbulb, illuminates object in the scene based on t
 direction does not affect the illumination as it creates light equally in all directions. 
 Area Light: Only work when baking a light map. Shine in all directions to one side of a rectangular plane. 
 
+//Material: 
+I tried to emulate my water bottle, which has a somewhat reflective grey plastic body. I have no idea how 
+to make a material reflective, as when I try to add metallic to the material, it just makes the object 
+black. 
+
+//Texture: 
+I added a couple of the textures from the list given in the ealier THREE.js Lab and plaved them onto a 
+cyllindrical object and a spherical object.
+
+//Skybox: 
+I added the default skybox, but that didn't look very cool so I changed it to a wireframe mesh which, 
+though it doesn't look much like a sky, looks much cooler in my opinion. 
