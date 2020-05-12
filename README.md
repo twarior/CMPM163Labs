@@ -68,4 +68,4 @@ though it doesn't look much like a sky, looks much cooler in my opinion.
 
 //Lab 6 Images:
 ![](Lab%206/Lab6.PNG)
-![](lab%206/waterbottle.jpg)
+![](Lab%206/waterbottle.jpg)
