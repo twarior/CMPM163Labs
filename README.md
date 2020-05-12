@@ -59,7 +59,7 @@ to make a material reflective, as when I try to add metallic to the material, it
 black. 
 
 //Texture: 
-I added a couple of the textures from the list given in the ealier THREE.js Lab and plaved them onto a 
+I added a couple of the textures from the list given in the ealier THREE.js Lab and placed them onto a 
 cyllindrical object and a spherical object.
 
 //Skybox: 
