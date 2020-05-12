@@ -67,3 +67,5 @@ I added the default skybox, but that didn't look very cool so I changed it to a 
 though it doesn't look much like a sky, looks much cooler in my opinion. 
 
 //Lab 6 Images:
+![](Lab%206/Lab6.PNG)
+![](lab%206/waterbottle.jpg)
