@@ -69,3 +69,6 @@ though it doesn't look much like a sky, looks much cooler in my opinion.
 //Lab 6 Images:
 ![](Lab%206/Lab6.PNG)
 ![](Lab%206/waterbottle.jpg)
+
+//Lab 7 
+One of the issues I had was that the unity tutorial did not mention how exactly to downaload the packages via the package manager or what exactly was needed. At first I thought I only needed to install the shader graph package, but once I got started in the VertexDisplacementSG I got an error/warning on the PBR Master node that said "the current render pipeline is not compatible with this master node." To fix this I aslo needed to install a render pipeline package. For this project, I chose the universal renderer pipeline, but I'm unsure if this was the correct pipeline to use. 
