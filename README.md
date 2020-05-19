@@ -70,5 +70,13 @@ though it doesn't look much like a sky, looks much cooler in my opinion.
 ![](Lab%206/Lab6.PNG)
 ![](Lab%206/waterbottle.jpg)
 
-//Lab 7 
+//Lab 7 Video: 
+https://drive.google.com/file/d/14DX7DRPL-p0JuAWlmMEaRPtXDrLrrsoC/view?usp=sharing
+
+//Description of How I made My Scene: 
+I started off with the unity tutorial and made my mountainous sphere. Then I made the wave plane based off of the youtube video tutorial. After that was done, I tried to apply the same material to a cube to make it mountainous, but all that accomplished was the side of the cube breaking off from one another with them all being smooth. I deciced that because I has the sphere working I would go with that. I scaled up the sphere becuase I wanted to put the water in between two mountains, but if I scaled down the water plane, it didn't look as watery. Once I got the water in a good spot, I made a little pladform out of cubes with different scaling, and I changed the directional light to make it appear more like sunset. Then I made two logs out of cylinders, and grabbed the particle effect from the kart racer tutorial. I edited the color and speed of the particle effect to make it look like smoke. Then I placed a point light under one of the logs and made it look like the fire was still going, if just a little bit. 
+
 One of the issues I had was that the unity tutorial did not mention how exactly to downaload the packages via the package manager or what exactly was needed. At first I thought I only needed to install the shader graph package, but once I got started in the VertexDisplacementSG I got an error/warning on the PBR Master node that said "the current render pipeline is not compatible with this master node." To fix this I aslo needed to install a render pipeline package. For this project, I chose the universal renderer pipeline, but I'm unsure if this was the correct pipeline to use. 
+
+//Partner Information:
+I did not work on this project with my partner. I asked them about their project after mine was finished and they had not yet started, but planned on doing Part 1.
