@@ -80,3 +80,13 @@ One of the issues I had was that the unity tutorial did not mention how exactly 
 
 //Partner Information:
 I did not work on this project with my partner. I asked them about their project after mine was finished and they had not yet started, but planned on doing Part 1.
+
+//Lab 8 Images
+![](Lab%208/MedeivalTown.PNG)
+![](Lab%208/ProceduralCityTutorial.PNG)
+![](Lab%208/Tw3_Village_Blandare_2.png)
+
+//I took inspriation from the medeival looking towns in the Witcher 3. I wanted something that would be more sparring in it's buildings than a normal city. I think what I produced went okay, but I wasn't able to really capture the same feel. Being able to rotate the buildings may have helped. I also took out the grass in the origional city and changed the plane's texture to a more dirt like one. I had difficulty submitting because for some reason the file sizes seemed very large. 
+
+//Partner Information:
+I contacted my partner but never heard back from them. We did not work on anything together. 
